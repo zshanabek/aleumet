@@ -21,6 +21,11 @@ class PostViewSet(viewsets.ModelViewSet):
             return [permissions.AllowAny()]
         return super(PostViewSet, self).get_permissions()
 
+    @action(detail=False, methods=['GET'])
+    def numbers(self, request, *args, **kwargs):
+        res = Post.objects.values_list('id', flat=True)
+        return Response(res, status=status.HTTP_200_OK)
+
     @action(detail=True, methods=['POST'])
     def like(self, request, *args, **kwargs):
         result = Like.objects.filter(
