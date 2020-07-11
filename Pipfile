@@ -15,6 +15,7 @@ djangorestframework-simplejwt = "*"
 requests = "*"
 faker = "*"
 python-dotenv = "*"
+drf-tracking = "*"
 
 [requires]
 python_version = "3.6"

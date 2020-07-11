@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'djoser',
     'rest_framework',
     'rest_framework.authtoken',
-    # 'rest_framework_simplejwt',
     'django_extensions',
     'post'
 ]
@@ -55,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'user.middlewares.SetLastVisitMiddleware',
 ]
 
 ROOT_URLCONF = 'aleumet.urls'
@@ -130,10 +130,11 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
-        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
 
-SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('JWT',),
+DJOSER = {
+    'SERIALIZERS': {
+        'current_user': 'user.serializers.UserSerializer',
+    },
 }
