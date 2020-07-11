@@ -4,7 +4,8 @@ Telegram bot saves data about users and forwards it to group chat.
 
 aleumet - word from Kazakh әлеумет ("community").
 
-Demo [app](https://aleumet.herokuapp.com/) 
+Demo [app](https://aleumet.herokuapp.com/).
+
 Documentation is [here](https://floating-forest-54496.herokuapp.com)
 
 ## Installation
