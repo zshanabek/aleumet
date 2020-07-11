@@ -11,11 +11,9 @@ werkzeug = "*"
 django = "*"
 djoser = "*"
 djangorestframework = "*"
-djangorestframework-simplejwt = "*"
 requests = "*"
 faker = "*"
 python-dotenv = "*"
-drf-tracking = "*"
 django-heroku = "*"
 
 [requires]
