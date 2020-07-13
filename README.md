@@ -1,6 +1,6 @@
 # Aleumet
 
-Telegram bot saves data about users and forwards it to group chat.
+Simple django app with post creation by users.
 
 aleumet - word from Kazakh әлеумет ("community").
 
